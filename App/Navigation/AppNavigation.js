@@ -50,7 +50,7 @@ const drawerButton = (navigation) =>
 const DrawerNavigation = StackNavigator({
   DrawerStack: { screen: DrawerStack },
   addEvent: { screen: AddEventScreen,
-    navigationOptions: { title: 'Add Event' } },
+    navigationOptions: { title: 'Add Reservation' } },
 }, {
   headerMode: 'float',
   navigationOptions: ({navigation}) => ({

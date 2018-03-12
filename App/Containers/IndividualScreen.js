@@ -148,6 +148,7 @@ class IndividualScreen extends Component {
 
 const mapStateToProps = (state) => {
   return {
+    individual: state.individual
   }
 }
 
