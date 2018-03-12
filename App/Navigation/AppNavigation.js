@@ -1,10 +1,13 @@
 import React from 'react'
 import { Text, Animated, Easing } from 'react-native'
 import { StackNavigator, DrawerNavigator } from 'react-navigation'
+import AddEventScreen from '../Containers/AddEventScreen'
 import LoginScreen from '../Containers/LoginScreen'
 import SignupScreen from '../Containers/SignupScreen'
 import ForgottenPasswordScreen from '../Containers/ForgottenPasswordScreen'
 import IndividualScreen from '../Containers/IndividualScreen'
+
+import LaunchScreen from '../Containers/LaunchScreen'
 import Screen1 from '../Containers/Screen1'
 import Screen2 from '../Containers/Screen2'
 import Screen3 from '../Containers/Screen3'
@@ -45,7 +48,9 @@ const drawerButton = (navigation) =>
 
 
 const DrawerNavigation = StackNavigator({
-  DrawerStack: { screen: DrawerStack }
+  DrawerStack: { screen: DrawerStack },
+  addEvent: { screen: AddEventScreen,
+    navigationOptions: { title: 'Add Event' } },
 }, {
   headerMode: 'float',
   navigationOptions: ({navigation}) => ({
@@ -73,6 +78,7 @@ const LoginStack = StackNavigator({
 
 // Manifest of possible screens
 const PrimaryNav = StackNavigator({
+  AddEventScreen: { screen: AddEventScreen },
   loginStack: { screen: LoginStack },
   drawerStack: { screen: DrawerNavigation }
 }, {
